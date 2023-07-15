@@ -22,7 +22,7 @@ app.use(cors());
   }
 })();
 
-
+app.get("/", (req, res) => res.json({message: "Welcome to QNote API"}))
 app.use("/api/auth", authRouter);
 app.use("/api/note", noteRouter);
 
